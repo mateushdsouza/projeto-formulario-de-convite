@@ -40,6 +40,8 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   background-color: #29292E;
 }
