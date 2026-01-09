@@ -2,24 +2,24 @@
   margin: 80px 80px 0 80px;
   display: grid;
   grid-template-columns: 33.87% 62.13%;
-  height: 100vh;
+  max-height: 100vh;
   width: 100%;
   max-width: 1280px;
 }
 
 aside {
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   height: 768px;
   background-color: var(--shape-background);
-  border-radius: 20px;
+  border-radius: 20px 0 0 20px;
 
   & .aside-container {
     background-image: url(../assets/Background.png);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 728px;
-    width: 400px;
+    width: 100%;
     border-radius: 12px;
 
     & .brand-title {
@@ -50,5 +50,22 @@ aside {
       }
     }
 
+  }
+}
+
+main {
+  padding: 20px;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: var(--shape-background);
+  border-radius: 0 20px 20px 0;
+  margin-bottom: 176.9px;
+  
+  & .invite-container {
+    overflow-y: auto;
+    height: 100%;
+    border-radius: 12px;
+    background-color: var(--shape-body);
+    padding: 80px 130px;
   }
 }
