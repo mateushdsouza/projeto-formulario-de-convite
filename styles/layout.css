@@ -52,20 +52,3 @@ aside {
 
   }
 }
-
-main {
-  padding: 20px;
-  max-height: 100%;
-  overflow-y: auto;
-  background-color: var(--shape-background);
-  border-radius: 0 20px 20px 0;
-  margin-bottom: 176.9px;
-  
-  & .invite-container {
-    overflow-y: auto;
-    height: 100%;
-    border-radius: 12px;
-    background-color: var(--shape-body);
-    padding: 80px 130px;
-  }
-}
