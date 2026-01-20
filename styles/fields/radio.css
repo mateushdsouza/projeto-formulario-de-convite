@@ -1,0 +1,50 @@
+label + .radio-wrapper {
+  margin-top: 1rem;
+}
+
+.radio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--input-stroke);
+  background-color: var(--shape-button);
+}
+
+.radio-wrapper radio-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: 1px solid var(--input-stroke);
+  border: 2px solid transparent;
+  transition: background-color .2s ease, border-color .2s ease, outline-color .2s ease;
+}
+
+.radio-wrapper radio-inner:hover {
+  background-color: var(--shape-hover);
+}
+
+.radio-wrapper radio-inner img {
+  width: 20px;
+  height: 20px;
+}
+
+.radio-wrapper radio-inner input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-wrapper radio-inner:has(input:checked) {
+  background-color: var(--input-base);
+  border-color: var(--brand-mid);
+  outline-color: var(--brand-mid);
+}
+
+.radio-wrapper radio-inner:has(input:checked) label {
+  color: var(--text-heading);
+}

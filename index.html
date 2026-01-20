@@ -43,8 +43,8 @@
             <fieldset class="about">
               <header>
                 <div class="header-img">
-                  <img src="assets/icons/calendar.svg" alt="Simbolo de calendario">
-                </div>  
+                  <img src="assets/icons/calendar-input-placeholder.svg" alt="Simbolo de calendario">
+                </div>
                 <span>Sobre o evento</span>
               </header>
 
@@ -56,32 +56,39 @@
               <div class="flex">
                 <div class="input-wrapper flex-1">
                   <label for="start-date">Início</label>
-                  <input type="date" id="start-date" name="start-date">
+                  <input type="text" id="start-date" name="start-date" placeholder="DD/MM/AAAA, --:--">
                 </div>
                 <div class="input-wrapper flex-1">
                   <label for="end-date">Fim</label>
-                  <input type="date" id="end-date" name="end-date">
+                  <input type="text" id="end-date" name="end-date" placeholder="DD/MM/AAAA, --:--">
                 </div>
               </div>
 
+              <div class="input-wrapper">
+                <label>Tipo</label>
                 <div class="radio-wrapper">
-                  <div class="radio-inner">
+                  <radio-inner>
                     <img src="assets/icons/building-2.svg" alt="Simbolo de um prédio">
-                    <input type="radio" name="event-type" id="in-person">
                     <label for="in-person">Presencial</label>
-                  </div>
-
-                  <div class="radio-inner">
+                    <input type="radio" name="event-type" id="in-person">
+                  </radio-inner>
+                  <radio-inner>
                     <img src="assets/icons/video.svg" alt="Simbolo de um video">
                     <input type="radio" name="event-type" id="online">
-                    <label for="online">Online</label>  
-                  </div>
+                    <label for="online">Online</label>
+                  </radio-inner>
                 </div>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="location">Local</label>
+                <input type="text" id="location" name="location" placeholder="Link ou endereço">
+              </div>
 
               <div class="textarea-wrapper">
                 <label for="event-description">Descrição</label>
                 <textarea id="event-description" name="event-description" cols="30" rows="5"
-                placeholder="Escreva sobre os detalhes do evento"></textarea>
+                  placeholder="Escreva sobre os detalhes do evento"></textarea>
               </div>
             </fieldset>
           </form>

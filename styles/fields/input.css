@@ -8,30 +8,25 @@ select {
   border: 2px solid transparent;
   outline: 1px solid var(--input-stroke);
 
-  padding: 0 16px;
+  padding: 12px 16px;
 
   font: var(--body-md);
+  color: var(--text-body);
 }
 
 label {
-  font: var(--body-md);
+  font: var(--body-sm);
   color: var(--text-body);
 }
 
 input:focus,
 textarea:focus,
-select:focus,
-input[type="date"]:focus-within {
+select:focus {
   outline: 1px solid var(--input-stroke);
   border-color: var(--input-stroke);
   outline-offset: .1px;
 }
 
-input[type="date"] {
-  position: relative;
-  color: var(--input-placeholder);
-
-  &::-webkit-calendar-picker-indicator {
-    opacity: 0;
-  }
+.about .flex {
+  gap: 12px;
 }

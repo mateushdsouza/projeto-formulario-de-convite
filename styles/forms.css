@@ -17,22 +17,3 @@ legend {
 fieldset + fieldset {
   margin-top: 3rem;
 }
-
-.about > header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  .header-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-  }
-
-  & span {
-    font: var(--heading-sm);
-    color: var(--text-heading);
-  }
-}
