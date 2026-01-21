@@ -82,3 +82,40 @@
 .radio-wrapper:has(#online:checked)::before {
   transform: translateX(100%);
 }
+
+/* COLOR WRAPPER */
+
+.color-wrapper {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 12px;
+  
+
+  & .color-inner {
+    border: .5px solid transparent;
+    label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: box-shadow .2s ease;
+
+      &:hover {
+        box-shadow: 0 0 0 6px var(--shape-hover);
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+.color-inner:has(input:checked) label {
+  outline: 3px solid var(--brand-light);
+  border-radius: 100%;
+  outline-offset: 2px;
+}
