@@ -51,8 +51,6 @@
   display: none;
 }
 
-.radio-wrapper .radio-inner:has(input:checked) { }
-
 .radio-wrapper .radio-inner:has(input:checked) span {
   color: var(--text-heading);
 }
@@ -71,8 +69,14 @@
   background-color: var(--shape-button);
   border-radius: 8px;
   transform: translateX(0);
-  transition: transform .25s ease;
+  opacity: 0;
+  transition: none;
   z-index: 0;
+}
+
+.radio-wrapper:has(input:checked)::before {
+  opacity: 1;
+  transition: transform .25s ease, opacity .2s ease;
 }
 
 .radio-wrapper:has(#online:checked)::before {
