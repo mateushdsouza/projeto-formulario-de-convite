@@ -89,6 +89,8 @@
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   gap: 12px;
+  width: 100%;
+  justify-items: center;
   
 
   & .color-inner {
@@ -117,5 +119,46 @@
 .color-inner:has(input:checked) label {
   outline: 3px solid var(--brand-light);
   border-radius: 100%;
+  outline-offset: 2px;
+}
+
+
+/* THEME WRAPPER */
+
+.theme-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+
+  & .theme-inner {
+    border: .5px solid transparent;
+    label {
+      background-color: var(--shape-button);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 103px;
+      padding: 4px 4px 4px 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: box-shadow .2s ease;
+
+      &:hover {
+        box-shadow: 0 0 0 6px var(--shape-hover);
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+.theme-inner:has(input:checked) label {
+  outline: 3px solid var(--brand-light);
+  border-radius: 8px;
   outline-offset: 2px;
 }
