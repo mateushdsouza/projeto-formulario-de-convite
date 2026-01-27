@@ -43,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  background-color: #29292E;
+  background-color: var(--shape-background);
 }
 
 img {
@@ -61,4 +61,18 @@ img {
 
 .flex-2 {
   flex: 2;
+}
+
+:root[data-theme="light"] {
+  --input-base: #F7F9FC;
+  --input-stroke: #C3CBD2;
+  --input-placeholder: #869198;
+
+  --shape-background: #F2F5F8;
+  --shape-body: #FFFFFF;
+  --shape-button: #E8EDF2;
+  --shape-hover: #DDE4EA;
+
+  --text-body: #3A3F45;
+  --text-heading: #1A1D1F;
 }

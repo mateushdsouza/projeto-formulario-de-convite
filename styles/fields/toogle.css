@@ -1,0 +1,85 @@
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.switch-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  cursor: default;
+  width: auto;
+}
+
+.switch-wrapper {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.switch input {
+  display: inline-block;
+}
+
+.switch input[type="checkbox"] {
+  appearance: none;
+  position: relative;
+  width: 64px;
+  height: 32px;
+  border-radius: 34px;
+  border: .1px solid var(--input-stroke);
+  background-color: var(--shape-button);
+  transition: background-color .25s ease, border-color .25s ease;
+  cursor: pointer;
+}
+
+.switch input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 4px;
+  top: 50%;
+  border-radius: 50%;
+  background-color: var(--input-stroke);
+  transform: translateY(-50%);
+  transition: transform .25s ease, background-color .25s ease;
+}
+
+/* checked: bola à direita e cápsula azul */
+.switch input[type="checkbox"]:checked {
+  border-color: var(--brand-light);
+  background-color: var(--brand-light);
+}
+
+.switch input[type="checkbox"]:checked::before {
+  background-color: var(--text-heading);
+  transform: translate(30px, -50%);
+}
+/* cápsula removida – apenas checkbox + texto */
+
+.switch span {
+  font: var(--body-sm);
+  color: var(--text-heading);
+}
+
+.switch .theme-text::before {
+  content: "Escuro";
+}
+
+.switch input:checked ~ .theme-text::before {
+  content: "Claro";
+}
+
+.switch .theme-text {
+  cursor: text;
+}
+
+/* sem cápsula para background */
