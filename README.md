@@ -1,12 +1,19 @@
 # Festivite — Formulário de Convite
 
+## Acessar no navegador
+
+**[Abrir o projeto](https://mateushdsouza.github.io/projeto-formulario-de-convite/)**
+
+Não é necessário clonar o repositório, instalar ferramentas ou baixar arquivos para visualizar a versão publicada.
+
+
 Interface de formulário para informar dados de um evento, personalização visual e contato.
 
 ## Tecnologias
 
 HTML e CSS.
 
-## Como visualizar
+## Desenvolvimento local (opcional)
 
 ```sh
 git clone https://github.com/mateushdsouza/projeto-formulario-de-convite.git
